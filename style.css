@@ -6,16 +6,47 @@ body{
 #mainContainer{
   display: grid;
   grid-template-columns: repeat(1, 0.6fr) repeat(1, 0.4fr);
-  background-color: aqua;
+  background-color: #e6e6fa;
   height: 100%;
+  color: grey;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #headerContainer{
   grid-column: 1/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: xxx-large;
+  background-color: white;
+
 }
 
 #appTitleContainer{
   grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: xx-large;
+  background-color: rgb(233, 223, 223);
+}
+
+#appTitleContainer div{
+  padding: 20px 80px 20px 80px;
+  color: white;
+  border-radius: 20px;
+  background-color: rgb(126, 123, 123);
+}
+
+#appTitleContainer div:hover{
+  padding: 20px;
+  color: grey;
+  border-radius: 20px;
+  background-color: rgb(255, 251, 251);
 }
 
 #bookContainer{
@@ -30,11 +61,77 @@ body{
 
 #addBookFormContainer{
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: rgb(114, 114, 126);
   grid-column: 2/3;
 }
 
+#addBookFormContainer #addBookHeader{
+  font-size: xx-large;
+}
+
+#addBookFormContainer #addBookInput{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid whitesmoke;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+#addBookFormContainer #addBookInput label{
+  font-size: x-large;
+}
+
+#addBookFormContainer #addBookInput input{
+  color: gray;
+  width: 400px;
+  height: 50px;
+  border: none;
+  font-size: x-large;
+  border-style: none;
+  border-radius: 20px;
+}
+
+#addBookFormContainer #addBookButton{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#addBookFormContainer #addBookButton button{
+  font-size: xx-large;
+  color: whitesmoke;
+  background-color: rgb(22, 190, 22);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 80px 10px 80px; 
+}
+
+#addBookFormContainer #addBookButton button:hover{
+  background-color: rgb(5, 92, 5);
+}
+
 #footerContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-size: large;
+  padding: 10px 0px 10px 0px; 
   grid-column: 1/3;
+  background-color: rgb(95, 81, 88);
 }
 
 .eachBookDiv{
@@ -42,19 +139,31 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid palevioletred;
-  border-radius: 20px;
-  background-color: whitesmoke;
-  color: rgb(66, 65, 65);
+  border-radius: 40px;
+  background-color: white;
+  box-shadow: 2px 2px 3px 3px grey;
+  color: rgb(48, 47, 47);
   width: 400px;
-  height: 200px;
+  height: 300px;
   padding: 20px;
+  font-size: x-large;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .eachBookButton{
   width: 250px;
   height: 50px;
-  background-color: rgb(139, 32, 32);
+  background-color: rgb(228, 14, 14);
   color: white;
   border-radius: 20px;
+  font-size: large;
+}
+
+.eachBookButton:hover{
+  background-color: rgb(131, 10, 10);
+}
+
+#isRead{
+  width: 40px;
+  height: 30px;
 }
