@@ -1,0 +1,60 @@
+body{
+  margin: 0;
+  height: 100%;
+}
+
+#mainContainer{
+  display: grid;
+  grid-template-columns: repeat(1, 0.6fr) repeat(1, 0.4fr);
+  background-color: aqua;
+  height: 100%;
+}
+
+#headerContainer{
+  grid-column: 1/3;
+}
+
+#appTitleContainer{
+  grid-column: 1/3;
+}
+
+#bookContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-evenly;
+  padding: 20px;
+  grid-column: 1/2;
+}
+
+#addBookFormContainer{
+  color: white;
+  grid-column: 2/3;
+}
+
+#footerContainer{
+  grid-column: 1/3;
+}
+
+.eachBookDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid palevioletred;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  color: rgb(66, 65, 65);
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+}
+
+.eachBookButton{
+  width: 250px;
+  height: 50px;
+  background-color: rgb(139, 32, 32);
+  color: white;
+  border-radius: 20px;
+}
