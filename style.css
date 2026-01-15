@@ -43,9 +43,7 @@ body{
 }
 
 #appTitleContainer div:hover{
-  padding: 20px;
   color: grey;
-  border-radius: 20px;
   background-color: rgb(255, 251, 251);
 }
 
@@ -57,19 +55,31 @@ body{
   justify-content: space-evenly;
   padding: 20px;
   grid-column: 1/2;
+  white-space: pre-line;
 }
 
 #addBookFormContainer{
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   gap: 50px;
   padding: 20px;
   border-radius: 50px;
   background-color: rgb(114, 114, 126);
   grid-column: 2/3;
+}
+
+#addBookFormContainer div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 50px;
+  /* box-shadow: 2px 2px 3px 3px white; */
 }
 
 #addBookFormContainer #addBookHeader{
@@ -96,9 +106,14 @@ body{
   width: 400px;
   height: 50px;
   border: none;
+  text-align: center;
   font-size: x-large;
   border-style: none;
   border-radius: 20px;
+}
+
+#addBookFormContainer #addBookInput input:focus{
+  outline: none;
 }
 
 #addBookFormContainer #addBookButton{
@@ -138,16 +153,53 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   border-radius: 40px;
   background-color: white;
   box-shadow: 2px 2px 3px 3px grey;
   color: rgb(48, 47, 47);
-  width: 400px;
-  height: 300px;
-  padding: 20px;
+  width: 450px;
+  height: 600px;
+  padding: 0px 10px 0px 10px;
   font-size: x-large;
   font-family: 'Times New Roman', Times, serif;
+}
+
+#bookInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: large;
+}
+
+#titlePara{
+  font-size: xxx-large;
+  font-weight: bold;
+  margin: 10px 0px 10px 0px;
+}
+
+#byPara{
+  font-size: x-large;
+  margin: 5px 0px 5px 0px;
+}
+
+#authorPara{
+  font-size: xx-large;
+  font-weight: bold;
+  margin: 10px 0px 10px 0px;
+}
+
+#pagesPara{
+  font-size: x-large;
+  /* font-weight: bold; */
+  margin: 5px 0px 5px 0px;
+}
+
+#bookIdPara{
+  font-size: x-large;
+  font-weight: bold;
+  margin: 5px 0px 5px 0px;
 }
 
 .eachBookButton{
@@ -155,6 +207,7 @@ body{
   height: 50px;
   background-color: rgb(228, 14, 14);
   color: white;
+  border: none;
   border-radius: 20px;
   font-size: large;
 }
@@ -166,4 +219,9 @@ body{
 #isRead{
   width: 40px;
   height: 30px;
+  margin-top: 20px;
+}
+
+span{
+  margin-bottom: 20px;
 }
