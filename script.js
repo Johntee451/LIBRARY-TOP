@@ -12,21 +12,23 @@ let submit = document.querySelector("#submit");
 let myLibrary = [];
 
 
-function Book(title, author, pages) {
+class Book {
+  constructor(title, author, pages) {
 
-  if (!new.target) {
-    throw Error("must use the 'NEW' keyword");
-  }
+    if (!new.target) {
+      throw Error("must use the 'NEW' keyword");
+    }
 
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.bookId = crypto.randomUUID();
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.bookId = crypto.randomUUID();
 
-  this.isRead = false;
+    this.isRead = false;
 
-  this.info = function(){
-    return(`${this.title} by ${this.author} Has ${this.pages} pages ID: ${this.bookId}`);
+    this.info = function () {
+      return (`${this.title} by ${this.author} Has ${this.pages} pages ID: ${this.bookId}`);
+    };
   }
 }
 
