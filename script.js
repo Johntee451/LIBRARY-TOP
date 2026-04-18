@@ -7,7 +7,18 @@ let author = document.querySelector("#author");
 let pages = document.querySelector("#pages"); 
 let submit = document.querySelector("#submit");
 
-
+submit.addEventListener("click", function (e) {
+  if (title.validity.valueMissing === true) {
+    title.setCustomValidity("Please Enter The Book Title");
+  }else if (author.validity.valueMissing === true) {
+    author.setCustomValidity("Please Enter The Author's Name");
+  }else if (pages.validity.valueMissing === true) {
+    pages.setCustomValidity("Please Enter The Number Of Pages");
+  }
+  else{
+    addBookToLibrary();
+  }
+})
 
 let myLibrary = [];
 
@@ -40,7 +51,7 @@ function addBookToLibrary() {
   author.value = "";
   pages.value = "";
 }
-submit.addEventListener("click", addBookToLibrary);
+//submit.addEventListener("click", addBookToLibrary);
 
 
 function displayBook() {

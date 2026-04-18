@@ -3,6 +3,10 @@ body{
   height: 100%;
 }
 
+span{
+  color: red;
+}
+
 #mainContainer{
   display: grid;
   grid-template-columns: repeat(1, 0.6fr) repeat(1, 0.4fr);
